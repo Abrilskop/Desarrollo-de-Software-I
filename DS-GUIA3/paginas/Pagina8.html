@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/estilos.css">
+    <title>Resultado</title>
+</head>
+<body style="background-color: #C3F7FF">
+    <h1>Resultado</h1>
+    <h3 id="respuesta8"></h3>
+    <script>
+        // Obtener los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre8 = urlParams.get('nombre8');
+        const apellido8 = urlParams.get('apellido8');
+        const nacionalidad8 = urlParams.get('nacionalidad8');
+
+        // Mostrar el resultado
+        document.getElementById('respuesta8').textContent = `Hola ${nombre8}, tu apellido es ${apellido8} y tu nacionalidad es ${nacionalidad8}`;
+    </script>
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+</body>
+</html>

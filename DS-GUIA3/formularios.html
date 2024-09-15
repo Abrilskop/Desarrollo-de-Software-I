@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body style="background-color: black">
+    <table border="2" width="100%" height="600">
+        <caption>
+            <h1 style="color: yellow; text-align: center;">FORMULARIO</h1>
+        </caption>
+        <!-- Primera fila -->
+        <tr>
+            <!-- Primera columna -->
+            <td bgcolor="#FFC9C9">
+                <h4 style="color: yellow; text-align: center;">Formulario de texto</h4>
+                <form action="./paginas/Pagina1.html" method="post" id="formulario1">
+                    <p>
+                        <label for="vnombre1">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre1" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido1">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido1">
+                    </p>
+                    <p>
+                        <label for="vnacionalidad1">Nacionalidad:</label>
+                        <input type="text" name="vnacionalidad" id="vnacionalidad1">
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><h3 id="respuesta1"></h3></p>
+                </form>
+            </td>
+            <!-- Segunda columna -->
+            <td bgcolor="#FFB8B8">
+                <h4 style="color: yellow; text-align: center;">Formulario de Texto con Boton</h4>
+                <form action="./paginas/Pagina2.html" method="post" id="formulario2">
+                    <p>
+                        <label for="vnombre2">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre2" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido2">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido2">
+                    </p>
+                    <p>
+                        <label for="vnacionalidad2">Nacionalidad:</label>
+                        <input type="text" name="vnacionalidad" id="vnacionalidad2">
+                    </p>
+                    <br>
+                    <p><button type="submit"><img src="./img/logo1.png" alt="imagen" width="30" height="30" style="vertical-align: middle;">Enviar</button></p>
+                    <p><h3 id="respuesta2"></h3></p>
+                </form>
+            </td>
+            <!-- Tercera columna -->
+            <td bgcolor="#FF9F9F">
+                <h4 style="color: yellow; text-align: center;">Formulario de texto con botones</h4>
+                <form action="./paginas/Pagina3.html" method="post" id="formulario3">
+                    <p>
+                        <label for="vnombre3">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre3" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido3">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido3">
+                    </p>
+                    <p>
+                        <label for="vnacionalidad3">Nacionalidad:</label>
+                        <input type="text" name="vnacionalidad" id="vnacionalidad3">
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><input type="reset" value="Borrar"></p>
+                    <p><button type="reset"><img src="./img/logo2.png" alt="imagen" width="30" height="30" style="vertical-align: middle;">Borrar</button></p>
+                    <p><h3 id="respuesta3"></h3></p>
+                </form>
+            </td>
+            <!-- Cuarta columna -->
+            <td bgcolor="#EAA8A8">
+                <h4 style="color: yellow; text-align: center;">Formulario con Contraseña y botones</h4>
+                <form action="./paginas/Pagina4.html" method="post" id="formulario4">
+                    <p>
+                        <label for="vnombre4">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre4" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido4">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido4">
+                    </p>
+                    <p>
+                        <label for="vcontraseña">Contraseña:</label>
+                        <input type="Password" name="vcontraseña" id="vcontraseña4">
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><h3 id="respuesta4"></h3></p>
+                </form>
+            </td>
+        </tr>
+        <!-- Segunda fila -->
+        <tr>
+            <!-- Quinta columna -->
+            <td bgcolor="#FCBFBF">
+                <h4 style="color: yellow; text-align: center;">Formulario con numeros y botones</h4>
+                <form action="./paginas/Pagina5.html" method="post" id="formulario5">
+                    <p>
+                        <label for="vnombre5">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre5" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido5">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido5">
+                    </p>
+                    <p>
+                        <label for="vnumeros"> Numeros: </label>
+                        <input type="Number" name="vnumeros" id="vnumeros5">
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><h3 id="respuesta5"></h3></p>
+                </form>
+            </td>
+            <!-- Sexta columna -->
+            <td bgcolor="#FFA1A1">
+                <h4 style="color: yellow; text-align: center;">Formulario con fecha y Botones</h4>
+                <form action="./paginas/Pagina6.html" method="post" id="formulario6">
+                    <p>
+                        <label for="vnombre6">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre6" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido6">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido6">
+                    </p>
+                    <p>
+                        <label for="vfecha">Fecha: </label>
+                        <input type="Date" name="vfecha" id="vfecha6">
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><h3 id="respuesta6"></h3></p>
+                </form>
+            </td>
+            <!-- Séptima columna -->
+            <td bgcolor="#A8E0B1">
+                <h4 style="color: yellow; text-align: center;">Formulario de Tiempo y Botones</h4>
+                <form action="./paginas/Pagina7.html" method="post" id="formulario7">
+                    <p>
+                        <label for="vnombre7">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre7" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido7">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido7">
+                    </p>
+                    <p>
+                        <label for="vtiempo">Tiempo:</label>
+                        <input type="time" name="vtiempo" id="vtiempo7">
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><h3 id="respuesta7"></h3></p>
+                </form>
+            </td>
+            <!-- Octava columna -->
+            <td bgcolor="#B9F4CB">
+                <h4 style="color: yellow; text-align: center;">Formulario de Checkbox y botones</h4>
+                <form action="./paginas/Pagina8.html" method="post" id="formulario8">
+                    <p>
+                        <label for="vnombre8">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre8" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido8">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido8">
+                    </p>
+                    <p>
+                        <label for="vcheck8">Check:</label>
+                        <!-- Opciones -->
+                        <input type="checkbox" id="opcion1" name="options" value="1">
+                        <label for="opcion1">Opción 1</label>
+                        <input type="checkbox" id="opcion2" name="options" value="2">
+                        <label for="opcion2">Opción 2</label>
+                        <input type="checkbox" id="opcion3" name="options" value="3">
+                        <label for="opcion3">Opción 3</label>
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><h3 id="respuesta8"></h3></p>
+                </form>
+            </td>
+        </tr>
+        <!-- Tercera fila -->
+        <tr>
+            <!-- primera columna -->
+            <td bgcolor="#94F6A9">
+                <h4 style="color: yellow; text-align: center;">Formulario de Boton radio y Botones</h4>
+                <form action="./paginas/Pagina9.html" method="post" id="formulario9">
+                    <p>
+                        <label for="vnombre9">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre9" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido9">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido9">
+                    </p>
+                    <p>
+                        <label for="vbotonradio8">RadioBtoton:</label>
+                        <!-- opciones -->
+                        <input type="radio" id="opcion1" name="options" value="1">
+                        <label for="opcion1">Opción 1</label>
+                        <input type="radio" id="opcion2" name="options" value="2">
+                        <label for="opcion2">Opción 2</label>
+                        <input type="radio" id="opcion3" name="options" value="3">
+                        <label for="opcion3">Opción 3</label>
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><h3 id="respuesta9"></h3></p>
+                </form>
+            </td>
+            <!-- segunda columna -->
+            <td bgcolor="#BDFF99">
+                <h4 style="color: yellow; text-align: center;">Formulario 10</h4>
+                <form action="./paginas/Pagina10.html" method="post" id="formulario10">
+                    <p>
+                        <label for="vnombre10">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre10" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido10">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido10">
+                    </p>
+                    <p>
+                        <label for="vnacionalidad10">Nacionalidad:</label>
+                        <input type="text" name="vnacionalidad" id="vnacionalidad10">
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><h3 id="respuesta10"></h3></p>
+                </form>
+            </td>
+            <!-- tercera columna -->
+            <td bgcolor="#B9FF93">
+                <h4 style="color: yellow; text-align: center;">Formulario 11</h4>
+                <form action="./paginas/Pagina11.html" method="post" id="formulario11">
+                    <p>
+                        <label for="vnombre11">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre11" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido11">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido11">
+                    </p>
+                    <p>
+                        <label for="vnacionalidad11">Nacionalidad:</label>
+                        <input type="text" name="vnacionalidad" id="vnacionalidad11">
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><h3 id="respuesta11"></h3></p>
+                </form>
+            </td>
+            <!-- cuarta columna -->
+            <td bgcolor="#A4F499">
+                <h4 style="color: yellow; text-align: center;">Formulario 12</h4>
+                <form action="./paginas/Pagina12.html" method="post" id="formulario12">
+                    <p>
+                        <label for="vnombre12">Nombre:</label>
+                        <input type="text" name="vnombre" id="vnombre12" placeholder="Ingrese su nombre">
+                    </p>
+                    <p>
+                        <label for="vapellido12">Apellido:</label>
+                        <input type="text" name="vapellido" id="vapellido12">
+                    </p>
+                    <p>
+                        <label for="vnacionalidad12">Nacionalidad:</label>
+                        <input type="text" name="vnacionalidad" id="vnacionalidad12">
+                    </p>
+                    <br>
+                    <p><input type="submit" value="Enviar"></p>
+                    <p><h3 id="respuesta12"></h3></p>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script src="./js/AppsForm.js"></script>
+    <script src="./js/AppsForm2.js"></script>
+    <script src="./js/AppsForm3.js"></script>
+    <script src="./js/AppsForm4.js"></script>
+    <script src="./js/AppsForm5.js"></script>
+    <script src="./js/AppsForm6.js"></script>
+    <script src="./js/AppsForm7.js"></script>
+    <script src="./js/AppsForm8.js"></script>
+    <script src="./js/AppsForm9.js"></script>
+    <script src="./js/AppsForm10.js"></script>
+    <script src="./js/AppsForm11.js"></script>
+    <script src="./js/AppsForm12.js"></script>
+</body>
+</html>

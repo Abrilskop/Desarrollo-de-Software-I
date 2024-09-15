@@ -1,0 +1,24 @@
+.listasD {
+    list-style-type: circle !important;
+    padding-left: 20px;
+    color: white;
+}
+
+ul li::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 5px;
+    margin-bottom: 1px;
+}
+
+a:visited {
+    color: purple;
+}
+
+a {
+    font-weight: bold;
+}

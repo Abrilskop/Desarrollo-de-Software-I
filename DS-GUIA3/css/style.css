@@ -1,0 +1,44 @@
+body {
+    background-color: none;
+    background-image: url("https://mentor.pe/wp-content/uploads/2023/09/UAC-frontis-1536x827.jpg");
+}
+
+
+
+table {
+    border: 8px solid #4f4;
+    width: 100%;
+    height: 100%;
+
+}
+
+h1{
+    background-color: #e2e2e2;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f77;
+}
+
+td {
+    border: 5px solid #f77;
+    width: 50px;
+    height: 50px;
+    box-sizing: content-box;
+    background-color: #fff;
+}
+
+h2, .desarrollo {
+    background-color:aquamarine;
+    text-align: center;
+}
+
+
+img {
+    padding: 0;
+    margin: 0;
+    background-position: center;
+}

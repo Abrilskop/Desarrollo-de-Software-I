@@ -1,0 +1,31 @@
+<!-- Pagina6.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Resultado</title>
+</head>
+<body style="background-color: #C3F7FF">
+    <h1>Resultado</h1>
+    <h3 id="respuesta6"></h3>
+    
+    <script>
+        // Obtener los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre6 = urlParams.get('nombre6');
+        const apellido6 = urlParams.get('apellido6');
+        const fecha6 = urlParams.get('fecha6');
+
+        // Mostrar el resultado en el elemento con id 'respuesta6'
+        const respuestaElement = document.getElementById('respuesta6');
+        respuestaElement.textContent = `Hola ${nombre6}, tu apellido es ${apellido6} y la fecha es ${fecha6}`;
+    </script>
+    
+    <!-- JS -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
+</body>
+</html>
