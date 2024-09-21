@@ -1,0 +1,117 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#contenedor{
+	width: 1100px;
+    margin: 0px auto;
+    border: 1px solid #000000;
+}
+header {
+    border: 5px solid #B22222; /* Cambiado a un rojo más suave */
+    background: #00796b; /* Verde azulado */
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    color: white;
+    line-height: 100px;/*  altura q tiene la caja  */
+}
+
+body {
+    background: url('../img/fondo.jpg') no-repeat center center fixed;
+    background-size: cover; /* Para cubrir toda la página */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    border-bottom: 1px solid #000000; /* Verde más suave */
+    background: rgba(51, 51, 51, 0.8); /* Negro con un toque de gris y algo de transparencia */
+    height: 50px;
+}
+
+nav ul li {
+    float: left; /* Al lado del otro*/
+    list-style: none;
+    margin: 10px;
+    line-height: 30px;
+}
+.clearfix{
+	clear: both;
+}
+a {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: #FFB300; /* Amarillo suave */
+}
+
+img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    display: block; /* Evita espacios en blanco debajo de la imagen */
+}
+
+
+#contenido {
+	float: left;
+    border: 5px solid #4CAF50; 
+    min-height: 500px;
+    background: transparent; /* Fondo transparente */
+}
+
+.articulo {
+    float: left;
+    background: rgba(250, 235, 215, 0.8); /* Color de fondo más cálido con transparencia */
+    height: 500px;
+    width: 60%;
+    min-width: 100px;
+}
+
+aside {
+    float: left;
+    background: rgba(225, 190, 231, 0.8); /* Lavanda suave con transparencia */
+    height: 500px;
+    width: 40%;
+    min-width: 100px;
+}
+
+.Columna01, .Columna02, .Columna03, .Columna04, .Columna05 {
+    border: 5px solid #4CAF50; /* Verde más suave */
+    background: rgba(255, 204, 188, 0.8); /* Color de fondo suave con transparencia */
+    float: left;
+    width: 20%;
+    min-width: 100px;
+    box-sizing: border-box;
+}
+
+footer {
+    border: 5px solid #B22222; /* Cambiado a un rojo más suave */
+    float: left;
+    background: rgba(51, 51, 51, 0.8); /* Negro con un toque de gris y algo de transparencia */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    min-height: 50px;
+}
+.boton-imagen {
+    width: 20px; /* Ajusta el tamaño de la imagen */
+    height: 20px; /* Ajusta el tamaño de la imagen */
+    margin-right: 5px; /* Espacio entre imagen y texto */
+}
+.boton-enviar{
+    background: none; /* Sin fondo */
+    border: 1px solid #000000; /* Sin borde */
+    color: #000; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    display: flex; /* Flexbox para alinear imagen y texto */
+    align-items: center; /* Alinear verticalmente */
+    padding: 0; /* Sin padding */
+}
