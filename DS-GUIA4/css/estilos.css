@@ -1,118 +1,198 @@
 * {
-    margin: 0px;
-    padding: 0px;
-}
-#contenedor{
-	width: 1100px;
-    margin: 0px auto;
-    border: 1px solid #000000;
-}
-header {
-    border: 5px solid #B22222; /* Cambiado a un rojo más suave */
-    background: #00796b; /* Verde azulado */
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    color: white;
-    line-height: 100px;/*  altura q tiene la caja  */
-}
-
-body {
-    background: url('../img/fondo.jpg') no-repeat center center fixed;
-    background-size: cover; /* Para cubrir toda la página */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-nav {
-    border-bottom: 1px solid #000000; /* Verde más suave */
-    background: rgba(51, 51, 51, 0.8); /* Negro con un toque de gris y algo de transparencia */
-    height: 50px;
-}
-
-nav ul li {
-    float: left; /* Al lado del otro*/
-    list-style: none;
-    margin: 10px;
-    line-height: 30px;
-}
-.clearfix{
-	clear: both;
-}
-a {
-    color: white;
-}
-
-h2 {
-    color: white;
-}
-
-h3 {
-    color: #FFB300; /* Amarillo suave */
-}
-
-img {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: auto; /* Mantiene la relación de aspecto de la imagen */
-    display: block; /* Evita espacios en blanco debajo de la imagen */
-}
-
-
-#contenido {
-	float: left;
-    border: 5px solid #4CAF50; 
-    min-height: 500px;
-    background: transparent; /* Fondo transparente */
-}
-
-.articulo {
-    float: left;
-    background: rgba(250, 235, 215, 0.8); /* Color de fondo más cálido con transparencia */
-    height: 500px;
-    width: 60%;
-    min-width: 100px;
-}
-
-aside {
-    float: left;
-    background: rgba(225, 190, 231, 0.8); /* Lavanda suave con transparencia */
-    height: 500px;
-    width: 40%;
-    min-width: 100px;
-}
-
-.Columna01, .Columna02, .Columna03, .Columna04, .Columna05 {
-    border: 5px solid #4CAF50; /* Verde más suave */
-    background: rgba(255, 204, 188, 0.8); /* Color de fondo suave con transparencia */
-    float: left;
-    width: 20%;
-    min-width: 100px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-footer {
-    border: 5px solid #B22222; /* Cambiado a un rojo más suave */
-    float: left;
-    background: rgba(51, 51, 51, 0.8); /* Negro con un toque de gris y algo de transparencia */
-    width: 100%;
-    height: 100%;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: url('img/fondo-restaurante.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+    .page-container::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+header {
+    background-color: rgba(0, 128, 128, 0.8);
+    color: white;
     text-align: center;
-    min-height: 50px;
-    margin: 0px auto;
+    padding: 1rem;
 }
-.boton-imagen {
-    width: 20px; /* Ajusta el tamaño de la imagen */
-    height: 20px; /* Ajusta el tamaño de la imagen */
-    margin-right: 5px; /* Espacio entre imagen y texto */
+
+nav {
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 0.5rem;
 }
-.boton-enviar{
-    background: none; /* Sin fondo */
-    border: 1px solid #000000; /* Sin borde */
-    color: #000; /* Color del texto */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón */
-    display: flex; /* Flexbox para alinear imagen y texto */
-    align-items: center; /* Alinear verticalmente */
-    padding: 0; /* Sin padding */
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+    }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+                nav ul li a:hover {
+                    color: #FFD700;
+                }
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-content {
+    flex: 2;
+    min-width: 300px;
+}
+
+aside {
+    flex: 1;
+    min-width: 250px;
+}
+
+.main-content, aside, .dish-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    color: #008080;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #D2691E;
+    margin-bottom: 0.5rem;
+}
+
+.content-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .submit-button:hover {
+        background-color: #45a049;
+    }
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.dish-card {
+    display: flex;
+    flex-direction: column;
+}
+
+    .dish-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        nav ul li {
+            margin: 0.5rem 0;
+        }
 }
