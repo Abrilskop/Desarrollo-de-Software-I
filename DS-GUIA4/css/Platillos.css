@@ -1,0 +1,64 @@
+.seccion-menu {
+    margin-bottom: 3rem;
+}
+
+.seccion-menu h2 {
+    color: #FFD700;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.rejilla-platos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tarjeta-plato {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.tarjeta-plato:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-plato img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta-plato h3 {
+    color: #D2691E;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.tarjeta-plato p {
+    color: #333;
+    margin: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+.precio {
+    display: block;
+    text-align: right;
+    color: #008080;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 1rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .rejilla-platos {
+        grid-template-columns: 1fr;
+    }
+}
