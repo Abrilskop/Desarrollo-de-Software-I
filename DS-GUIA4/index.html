@@ -5,90 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante de Gia</title>
     <link rel="stylesheet" type="text/css" href="./css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="./css/animacion.css">
 </head>
 <body>
     <!--CABEZERA O HEADER !-->
-    <div class="page-container">
+    <div class="contenedor-pagina">
         <header>
-            <h1>Restaurante de Gia</h1>
+            <h1>Resturante de Gia</h1>
         </header>
-
+        <!-- animacion -->
+        <div class="wrap">
+          <svg class="animated-svg" width="28.2" height="31" viewBox="0 0 28.2 31">
+            <path id="st0" fill="none" stroke-width="0.2" stroke="#3D8CD0" d=""/>
+            <text x="14.1" y="28" font-family="Arial" font-size="4.5" fill="#E8E321" text-anchor="middle" stroke="#3D8CD0" stroke-width="0.2">Restaurante de Gia yeii!</text>
+          </svg>
+        </div>
         <!-- barra de navegacion -->
         <nav>
             <ul>
                 <li><a href="index.html">Index</a></li>
-                <li><a href="platillos.html">Platillos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="./Paginas/Platillos.html">Platillos</a></li>
+                <li><a href="./Paginas/Nosotros.html">Nosotros</a></li>
+                <li><a href="./Paginas/Blog.html">Blog</a></li>
+                <li><a href="./Paginas/Contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        
         <!--FILA DEL CUERPO DE LA PAGINA !-->
         <main>
-            <div class="content-wrapper">
-                <section class="main-content">
+            <div class="wrapper-contenido">
+                <section class="contenido-principal">
                     <article>
-                        <h2>MACHU PICCHU</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, possimus soluta sunt iste, beatae praesentium? Saepe tempore neque, voluptatem alias quos. Vero, libero nemo vel veniam est delectus laudantium dolore.</p>
-                        <h2>CIUDAD INKA:</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique dolorem repellat nulla eveniet sunt sed? Temporibus voluptatum atque labore quia similique, dolor ipsa reiciendis quisquam id vitae ex laboriosam, eos.</p>
-                        <img src="img/restaurante.jpg" alt="Llama" class="content-image">
+                        <h2>RESTAURANTE DE GIA</h2>
+                        <p>Pasa momentos inolvidables en el restaurante de GIA, contamos con los 3 chefs michelinis de 3 estrellas del Perú.</p>
+                        <h2>HORARIO:</h2>
+                        <p>Atendemos a todas horas los 7 días de la semana, siempre dispuestos a servir a nuestros clientes nuevos y preferidos.</p>
+                        <img src="img/restaurante.jpg" alt="Restaurante" class="imagen-contenido">
                     </article>
                 </section>
                 <!-- barra lateral -->
                 <aside>
                     <h3>FORMULARIO DE SUGERENCIAS</h3>
                     <form action="uno.html" method="post" id="formulario1">
-                        <div class="form-group">
+                        <div class="grupo-formulario">
                             <label for="vnombre1">Nombre:</label>
                             <input type="text" name="vnombre1" id="vnombre1" placeholder="Ingrese su nombre">
                         </div>
-                        <div class="form-group">
+                        <div class="grupo-formulario">
                             <label for="vcorreo1">Correo:</label>
                             <input type="email" name="vcorreo1" id="vcorreo1" placeholder="Ingrese su correo">
                         </div>
-                        <div class="form-group">
+                        <div class="grupo-formulario">
                             <label for="vsugerencia1">Sugerencia:</label>
                             <textarea name="vsugerencia1" id="vsugerencia1" placeholder="Deje su sugerencia, lo leemos :)" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="submit-button">
-                            <img src="img/olla-caliente.png" alt="Enviar" class="button-icon">
+                        <button type="submit" class="boton-enviar">
+                            <img src="img/olla-caliente.png" alt="Enviar" class="icono-boton">
                             Enviar
                         </button>
                     </form>
                 </aside>
             </div>
             <!-- columnas de la pagina principal-->
-            <div class="dishes-grid">
+            <div class="rejilla-platos">
                 <!--1ra columna-->
-                <div class="dish-card">
+                <div class="tarjeta-plato">
                     <h3>Picante a la Tacneña</h3>
                     <p>El picante a la tacneña es un plato emblemático de la cocina de Tacna. Se prepara con carne de res, la cual se cocina en una salsa espesa hecha de ají amarillo, cebolla, ajo y especias. Este guiso se sirve generalmente acompañado de arroz y papas sancochadas, y a menudo se adorna con aceitunas.</p>
                     <img src="img/Columnas/PicanteTacneña.jpg" alt="Picante a la Tacneña">
                 </div>
                 <!--2da columna-->
-                <div class="dish-card">
-                    <h3>Chicharron</h3>
+                <div class="tarjeta-plato">
+                    <h3>Chicharrón</h3>
                     <p>El chicharrón es un delicioso plato que consiste en trozos de cerdo fritos hasta que la piel queda crujiente y dorada. Su textura crujiente y su sabor jugoso lo convierten en una opción popular para acompañar con yuca o papas, además de una salsa de ají que realza su sabor. Es ideal como aperitivo o plato principal.</p>
-                    <img src="img/Columnas/Chicharron.jpg" alt="Chicharron">
+                    <img src="img/Columnas/Chicharron.jpg" alt="Chicharrón">
                 </div>
                 <!--3ra columna-->
-                <div class="dish-card">
-                    <h3>Tallarin al pesto</h3>
+                <div class="tarjeta-plato">
+                    <h3>Tallarín al pesto</h3>
                     <p>Los tallarines al pesto son una pasta deliciosa que se mezcla con una salsa de pesto hecha a base de albahaca fresca, ajo, nueces y aceite de oliva. Esta combinación crea un plato lleno de frescura y sabor. Se puede servir con queso parmesano rallado por encima y es perfecto para cualquier ocasión.</p>
-                    <img src="img/Columnas/TallarinAlPesto.jpg" alt="Tallarin al pesto">
+                    <img src="img/Columnas/TallarinAlPesto.jpg" alt="Tallarín al pesto">
                 </div>
                 <!--4ta columna-->
-                <div class="dish-card">
-                    <h3>Pollo al Horno</h3>
+                <div class="tarjeta-plato">
+                    <h3>Pollo al horno</h3>
                     <p>El pollo al horno es un plato clásico que se prepara marinando el pollo en una mezcla de especias, ajo y hierbas, y luego cocinándolo lentamente en el horno. El resultado es un pollo jugoso y tierno con una piel dorada y crujiente. Se puede acompañar con papas asadas y verduras al vapor para una comida completa y deliciosa.</p>
-                    <img src="img/Columnas/PolloAlHorno.jpg" alt="Pollo al Horno">
+                    <img src="img/Columnas/PolloAlHorno.jpg" alt="Pollo al horno">
                 </div>
                 <!--5ta columna-->
-                <div class="dish-card">
-                    <h3>Pollo Asado</h3>
+                <div class="tarjeta-plato">
+                    <h3>Pollo asado</h3>
                     <p>El pollo asado es un plato muy popular y sabroso que consiste en un pollo marinado en una mezcla de especias, ajo, limón y hierbas. Se cocina lentamente en el horno o a la parrilla, lo que resulta en una piel dorada y crujiente, mientras que la carne se mantiene jugosa y tierna. Este plato se suele servir con papas al horno o ensalada, y es perfecto para reuniones familiares y celebraciones.</p>
-                    <img src="img/Columnas/PolloAsado.jpg" alt="Pollo Asado">
+                    <img src="img/Columnas/PolloAsado.jpg" alt="Pollo asado">
                 </div>
             </div>
         </main>
@@ -97,5 +105,6 @@
             <h2>Hecho por: Gianella Ramos Ticahuanca</h2>
         </footer>
     </div>
+    <script src="js/animacion.js"></script>
 </body>
 </html>
