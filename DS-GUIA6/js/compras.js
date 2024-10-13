@@ -35,6 +35,48 @@ const datos = {
       precio: 1300,
       cantidad: 80,
     },
+    {
+      id: 3,
+      titulo: "Megalosaurio",
+      descripcion: "Silla ergonómica con soporte lumbar",
+      precio: 5000,
+      cantidad: 15,
+    },
+    {
+      id: 4,
+      titulo: "Tiranosaurio",
+      descripcion: "Laptop HP con Intel Core i7 y 16GB RAM",
+      precio: 75000,
+      cantidad: 5,
+    },
+    {
+      id: 5,
+      titulo: "Maria coc",
+      descripcion: "Auriculares inalámbricos con cancelación de ruido",
+      precio: 2200,
+      cantidad: 30,
+    },
+    {
+      id: 6,
+      titulo: "Esperornis",
+      descripcion: "Smartphone Samsung Galaxy S21",
+      precio: 55000,
+      cantidad: 10,
+    },
+    {
+      id: 7,
+      titulo: "gallimimus",
+      descripcion: "Teclado RGB mecánico retroiluminado",
+      precio: 3000,
+      cantidad: 25,
+    },
+    {
+      id: 8,
+      titulo: "Triceratops",
+      descripcion: "Monitor 4K de 27 pulgadas",
+      precio: 40000,
+      cantidad: 12,
+    },
   ],
 };
 
