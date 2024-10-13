@@ -3,15 +3,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column; /* Para organizar cabecera y contenido verticalmente */
+  justify-content: flex-start; /* Mantener la cabecera arriba */
+  align-items: center; /* Centrar el contenido horizontalmente */
+  min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
 }
+
 #store-container {
   display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se muevan a una nueva fila si no caben */
+  justify-content: center; /* Centrar los elementos en cada fila */
   gap: 10px;
+  max-width: 900px; /* Limita el ancho total del contenedor para que haya filas de tres */
 }
 
 #store-container .item {
   border: solid 1px #ccc;
   padding: 20px;
+  width: calc(33.33% - 20px); /* Cada elemento ocupa un tercio del contenedor menos el espacio de los márgenes */
+  box-sizing: border-box; /* Incluye el padding y border en el ancho total del elemento */
 }
 
 #shopping-cart-container {
