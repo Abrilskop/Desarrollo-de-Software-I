@@ -32,49 +32,49 @@ const datos = {
     {
       id: 2,
       descripcion: "Buzos Hue",
-      precio: 1300,
+      precio: 300,
       cantidad: 80,
     },
     {
       id: 3,
       titulo: "Megalosaurio",
       descripcion: "Silla ergonómica con soporte lumbar",
-      precio: 5000,
+      precio: 100,
       cantidad: 15,
     },
     {
       id: 4,
       titulo: "Tiranosaurio",
-      descripcion: "Laptop HP con Intel Core i7 y 16GB RAM",
-      precio: 75000,
+      descripcion: "Forma interesante de Q-bit",
+      precio: 75,
       cantidad: 5,
     },
     {
       id: 5,
       titulo: "Maria coc",
-      descripcion: "Auriculares inalámbricos con cancelación de ruido",
-      precio: 2200,
+      descripcion: "Maria para la buena salud de la piel",
+      precio: 110,
       cantidad: 30,
     },
     {
       id: 6,
-      titulo: "Esperornis",
-      descripcion: "Smartphone Samsung Galaxy S21",
-      precio: 55000,
+      titulo: "Heperornis",
+      descripcion: "hidratante natural a base de Hesperornis",
+      precio: 95,
       cantidad: 10,
     },
     {
       id: 7,
       titulo: "gallimimus",
-      descripcion: "Teclado RGB mecánico retroiluminado",
-      precio: 3000,
+      descripcion: "La pata de conejo de la suerte",
+      precio: 300,
       cantidad: 25,
     },
     {
       id: 8,
       titulo: "Triceratops",
-      descripcion: "Monitor 4K de 27 pulgadas",
-      precio: 40000,
+      descripcion: "Abundancia en las aguas",
+      precio: 140,
       cantidad: 12,
     },
   ],
@@ -193,12 +193,16 @@ function rendercarrocompras() {
                 </div>
             </div>`;
   });
-  
+
   // Botón para cerrar el carrito
   const closeButton = `
   <div class="cart-header">
     <button id="bClose">Close</button>
   </div>`;
+  
+  // Calcula el total y lo muestra
+  const total = carrocompras.methods.getTotal();
+  const totalDiv = `<div class="total">Total: ${numberToCurrency(total)}</div>`;
   
   // Botón para terminar la compra si hay items en el carrito
   const purchaseButton =
@@ -207,56 +211,55 @@ function rendercarrocompras() {
     <button id="bPurchase">Terminar compra</button>
   </div>`
       : "";
-  
-  // Calcula el total y lo muestra
-  const total = carrocompras.methods.getTotal();
-  const totalDiv = `<div class="total">Total: ${numberToCurrency(total)}</div>`;
-  
+
+  // Contenedor para total y botón de compra
+  const totalAndPurchaseContainer = `
+    <div class="total-purchase-container">
+      ${totalDiv}
+      ${purchaseButton}
+    </div>
+  `;
+
   // Actualiza el contenedor del carrito con el HTML generado
   document.querySelector("#shopping-cart-container").innerHTML =
-    closeButton + html.join("") + totalDiv + purchaseButton;
+    closeButton + html.join("") + totalAndPurchaseContainer;
 
   // Muestra el carrito
   document.querySelector("#shopping-cart-container").classList.remove("hide");
   document.querySelector("#shopping-cart-container").classList.add("show");
 
-  // Agrega eventos a los botones de agregar y quitar items del carrito
+  // Agrega eventos a los botones de agregar y eliminar del carrito
   document.querySelectorAll(".addOne").forEach((button) => {
     button.addEventListener("click", (e) => {
-      const id = parseInt(button.getAttribute("data-id")); // Obtiene el ID del item
-      carrocompras.methods.add(id, 1); // Agrega uno al carrito
+      const id = parseInt(button.getAttribute("data-id")); // Obtiene el ID del producto
+      carrocompras.methods.add(id, 1); // Agrega el item al carrito
       rendercarrocompras(); // Actualiza la vista del carrito
     });
   });
 
   document.querySelectorAll(".removeOne").forEach((button) => {
     button.addEventListener("click", (e) => {
-      const id = parseInt(button.getAttribute("data-id")); // Obtiene el ID del item
-      carrocompras.methods.remove(id, 1); // Quita uno del carrito
+      const id = parseInt(button.getAttribute("data-id")); // Obtiene el ID del producto
+      carrocompras.methods.remove(id, 1); // Elimina un item del carrito
       rendercarrocompras(); // Actualiza la vista del carrito
     });
   });
 
   // Evento para cerrar el carrito
-  document.querySelector("#bClose").addEventListener("click", (e) => {
-    document.querySelector("#shopping-cart-container").classList.remove("show"); // Oculta el carrito
+  document.querySelector("#bClose").addEventListener("click", () => {
+    document.querySelector("#shopping-cart-container").classList.remove("show");
     document.querySelector("#shopping-cart-container").classList.add("hide");
   });
-  
-  // Evento para realizar la compra
-  const bPurchase = document.querySelector("#bPurchase");
-  if (bPurchase) {
-    bPurchase.addEventListener("click", (e) => {
-      carrocompras.methods.purchase(); // Procesa la compra
-    });
-  }
+
+  // Evento para terminar la compra
+  document.querySelector("#bPurchase").addEventListener("click", () => {
+    carrocompras.methods.purchase(); // Procesa la compra
+    rendercarrocompras(); // Actualiza la vista del carrito
+    Swal.fire("Gracias por su compra"); // Muestra alerta de agradecimiento
+  });
 }
 
-// Función para formatear números a moneda
-function numberToCurrency(n) {
-  return new Intl.NumberFormat("en-US", {
-    maximumSignificantDigits: 2,
-    style: "currency",
-    currency: "USD", // Formatea a dólares
-  }).format(n); // Devuelve el número formateado
+// Función para formatear números como moneda
+function numberToCurrency(number) {
+  return `$${number.toFixed(2)}`; // Devuelve el número formateado como moneda
 }
